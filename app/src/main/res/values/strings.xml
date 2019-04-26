@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">omnitrax</string>
+    <string name="runnersName">Runners Name</string>
+    <string name="runnersTime">10</string>
+    <string name="runnersAge">37</string>
+    <string name="runnersRanking">3</string>
+    <string name="empty">Empty List</string>
+    <string name="lableAge">Age</string>
+    <string name="lableTime">Time</string>
+    <string name="labelRanking">Ranking</string>
+    <string name="lblStart">Start</string>
+    <string name="tvAppTitle">Runners Ranking App</string>
+</resources>
