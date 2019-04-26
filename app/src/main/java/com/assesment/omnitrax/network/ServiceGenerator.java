@@ -1,6 +1,5 @@
 package com.assesment.omnitrax.network;
 
-import android.util.Log;
 
 import com.assesment.omnitrax.util.Constants;
 

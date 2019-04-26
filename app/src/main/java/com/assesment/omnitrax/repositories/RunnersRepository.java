@@ -5,7 +5,6 @@ import android.arch.lifecycle.MediatorLiveData;
 import android.arch.lifecycle.MutableLiveData;
 import android.arch.lifecycle.Observer;
 import android.support.annotation.Nullable;
-import android.util.Log;
 
 import com.assesment.omnitrax.models.Runner;
 import com.assesment.omnitrax.network.RunnersApiClient;
@@ -85,9 +84,7 @@ public class RunnersRepository {
         }
     }
 
-    public LiveData<Boolean> isQueryExhausted(){
-        return mIsQueryExhausted;
-    }
+
 
     public LiveData<List<Runner>> getRunners(){
         return mRunners;
@@ -97,12 +94,6 @@ public class RunnersRepository {
         mRunnersApiClient.getRunnersFromApi();
     }
 
-    public void cancelRequest(){
-        mRunnersApiClient.cancelRequest();
-    }
 
-    public LiveData<Boolean> isRunnersRequestTimedOut(){
-        return mRunnersApiClient.isRunnersRequestTimedOut();
-    }
 
 }

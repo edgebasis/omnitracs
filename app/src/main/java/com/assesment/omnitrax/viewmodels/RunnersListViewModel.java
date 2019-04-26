@@ -30,9 +30,7 @@ public class RunnersListViewModel extends ViewModel {
         mRunnersRepository.getRunnersFromApi();
     }
 
-    public boolean isViewingRunners(){
-        return mIsViewingRunners;
-    }
+
 
     public void setIsViewingRunners(boolean isViewingRunners){
         mIsViewingRunners = isViewingRunners;

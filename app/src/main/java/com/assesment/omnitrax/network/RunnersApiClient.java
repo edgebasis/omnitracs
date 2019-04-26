@@ -61,11 +61,9 @@ public class RunnersApiClient {
     }
 
     private class RetrieveRunnersRunnable implements Runnable {
-        private int pageNumber;
         boolean cancelRequest;
 
         public RetrieveRunnersRunnable() {
-            this.pageNumber = pageNumber;
             this.cancelRequest = false;
         }
 
@@ -77,7 +75,6 @@ public class RunnersApiClient {
                 if(cancelRequest) return;
                 if(response.code() == 200){
                     List<Runner> runnersList = new ArrayList<>(((RunnersResponse)response.body()).getRunners());
-                    Log.d(TAG, "run list: " + runnersList.size());
                         mRunners.postValue(runnersList);
 
                 }else{
@@ -93,7 +90,6 @@ public class RunnersApiClient {
         }
 
         private Call<RunnersResponse> getRunners() {
-            Log.d(TAG, "getRunners: here");
             return ServiceGenerator.getRunnersApi().getRunners();
         }
 
@@ -104,13 +100,6 @@ public class RunnersApiClient {
         }
     }
 
-    public void cancelRequest(){
-        if(mRetrieveRunnersRunnable != null){
-            mRetrieveRunnersRunnable.cancelRequest();
-        }
-        if(mRetrieveRunnersRunnable != null){
-            mRetrieveRunnersRunnable.cancelRequest();
-        }
-    }
+
 
 }
